@@ -200,28 +200,26 @@ def raw_data(city):
         (str) city - name of the city to analyze
     """
     # open csv file
-    f = open(CITY_DATA[city])
+    with open(CITY_DATA[city]) as f:
 
-    # ask user if they'd like to see raw data
-    see_data = input("Would you like to see the raw data? Y/N?\n").lower()
+        # ask user if they'd like to see raw data
+        see_data = input("Would you like to see the raw data? Y/N?\n").lower()
 
-    # make sure we get a correct input from the user
-    while see_data != 'n' and see_data != 'y':
-        see_data = input("Please type Y for yes or N for no.\n")
-
-    # output 5 lines of data and ask user if they'd like to see more
-    while see_data == 'y':
-        print(f.readline())
-        print(f.readline())
-        print(f.readline())
-        print(f.readline())
-        print(f.readline())
-        see_data = input('Would you like to see more lines? Y/N?\n').lower()
+        # make sure we get a correct input from the user
         while see_data != 'n' and see_data != 'y':
             see_data = input("Please type Y for yes or N for no.\n")
 
-    # close csv file
-    f.close()
+        # output 5 lines of data and ask user if they'd like to see more
+        while see_data == 'y':
+            print(f.readline())
+            print(f.readline())
+            print(f.readline())
+            print(f.readline())
+            print(f.readline())
+            see_data = input('Would you like to see more lines? Y/N?\n').lower()
+            while see_data != 'n' and see_data != 'y':
+                see_data = input("Please type Y for yes or N for no.\n")
+
 
 def main():
     while True:
