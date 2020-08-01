@@ -7,7 +7,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv' }
 
 days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-months = ['january', 'february', 'march', 'april', 'may', 'june']
+months = ['january', 'february', 'march', 'april', 'may', 'june', 'none']
 
 
 def get_filters():
@@ -29,15 +29,15 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     month = input("Choose a month from January to June to filter by, or choose none:\n").lower()
 
-    while month != 'none' and month not in months:
+    while month not in months:
         month = input("Please type a month name or none.\n").lower()
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day_of_week = input("Choose a day of the week to filter by, or choose none. Sunday is 0 and Saturday is 6.\n")\
         .lower()
 
-    digit_days = ('0', '1', '2', '3', '4', '5', '6')
-    while day_of_week != 'none' and day_of_week  not in digit_days:
+    digit_days = ('0', '1', '2', '3', '4', '5', '6', 'none')
+    while day_of_week not in digit_days:
         day_of_week = input("Please type a number between 0 (Sunday) and 6 (Saturday) or none.\n")
 
     print('-'*40)
