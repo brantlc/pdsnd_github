@@ -1,5 +1,5 @@
 ### Date created
-7/31/20
+07/31/2020
 
 ### Project Title
 Bikeshare Data
