@@ -5,7 +5,8 @@
 Bikeshare Data
 
 ### Description
-Outputs statistics based on bikeshare data and user parameters.
+This outputs statistics based on bikeshare data and parameters that are input by
+a user.
 
 ### Files used
 bikeshare.py
@@ -14,4 +15,4 @@ new_york_city.csv
 washington.csv
 
 ### Credits
-Forked from https://github.com/udacity/pdsnd_github.
+This repo was forked from https://github.com/udacity/pdsnd_github.
