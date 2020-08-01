@@ -207,7 +207,7 @@ def raw_data(city):
 
         # make sure we get a correct input from the user
         while see_data != 'n' and see_data != 'y':
-            see_data = input("Please type Y for yes or N for no.\n")
+            see_data = input("Please type Y for yes or N for no.\n").lower()
 
         # output 5 lines of data and ask user if they'd like to see more
         while see_data == 'y':
@@ -218,7 +218,7 @@ def raw_data(city):
             print(f.readline())
             see_data = input('Would you like to see more lines? Y/N?\n').lower()
             while see_data != 'n' and see_data != 'y':
-                see_data = input("Please type Y for yes or N for no.\n")
+                see_data = input("Please type Y for yes or N for no.\n").lower()
 
 
 def main():
